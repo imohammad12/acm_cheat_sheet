@@ -7,7 +7,7 @@ public:
         numSets = n;
         rank.assign(n, 0); p.assign(n, 0);
         for (int i = 0; i < n; i++) p[i] = i;
-        setSizes.assign(N, 1);
+        setSizes.assign(n, 1);
     }
     int findSet(int i) { return (p[i] == i) ? i : p[i] = findSet(p[i]); }
     bool isSameSet(int i, int j) { return findSet(i) == findSet(j); }
